@@ -30,26 +30,32 @@ body {
 
 
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; // Prevents scrolling
+  height: 100%; // Ensures full height
+}
+
 .slick-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 1200px; /* Adjust based on your design */
-  margin: auto;
+  width: 100vw; // Full viewport width
+  height: 100vh; // Full viewport height
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .slick-slide {
-  position: relative;
+  height: 100%; // Full height of the wrapper
+  width: 100%; // Full width of the wrapper
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
   img {
-    width: 100%;
-    height: 100vh; /* Adjust height based on design */
-    object-fit: cover; /* Ensures images fill the container */
+    width: 100%; // Ensures the image fills the container width
+    height: 100%; // Ensures the image fills the container height
+    object-fit: cover; // Ensures images cover the container without distortion
   }
 }
-
-
-
-

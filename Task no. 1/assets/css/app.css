@@ -28,15 +28,24 @@ body {
   font-family: var(--font-roboto);
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
 .slick-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 1200px; /* Adjust based on your design */
-  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .slick-slide {
-  position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +53,7 @@ body {
 }
 .slick-slide img {
   width: 100%;
-  height: 100vh; /* Adjust height based on design */
+  height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* Ensures images fill the container */
+     object-fit: cover;
 }/*# sourceMappingURL=app.css.map */
