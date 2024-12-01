@@ -50,51 +50,95 @@ html, body {
 
 .overlay-content {
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  top: 41px; 
+  left: 31px; 
   padding: 20px;
   color: white;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:transparent;
   border-radius: 10px;
-  width: 300px;
+  width: 350px;
+  height:100vh
 }
 
 .logo {
-  max-width: 150px;
+
+  max-width: 195px;
   display: block;
   margin: 30px auto 20px;
 }
 
 .text-content {
+  width:300px;
   text-align: center;
   margin-bottom: 20px;
+  margin-left: 10px;
 
-  h1 {
-    margin: 0 0 10px 0;
-    font-size: 2rem;
+  h3 {
+    letter-spacing: 1.3px;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-weight: 400;
+    margin:70px 0 10px 0;
+    font-size: 1.6rem;
   }
 
   p {
-    margin: 0;
-    font-size: 1rem;
+    margin: 25px 0 0 0;
+    font-size:14.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    span{
+      letter-spacing: 1.5px;
+      line-height: 1.69;
+      margin-bottom: 7px; 
+      display: block;
+    }
   }
 }
 
 .subscribe-follow {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
-
-  box-icon {
-    display: inline;
+  margin: 30px 0 0 10px;
+  .logo{
+    margin:10px 0 0 10px
   }
-
-  span {
-    display: flex;
+  .subscribe-container {
+    display: relative;
     align-items: center;
-    font-size: 1rem;
+    gap: 10px;
+    margin-top: 20px;
+
+    .subscribe-input {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: white;
+      border: transparent;
+      border-bottom:2px solid yellow;
+      background-color: transparent; 
+      padding: 10px;
+      height:45px;
+      width: 275px; 
+      outline: none; 
+
+      &::placeholder {
+        transform: translateY(-6px); 
+
+        text-indent: 7px;
+        font-style: italic;
+        font-size: 13.5px;
+        color: rgba(101, 88, 88, 0.7);
+      }
+
+      &:focus {
+        border-color: white; 
+      }
+    }
+    box-icon{
+      position: absolute;
+      right:50px;
+      transform: translateY(20%);
+    }
   }
 }
