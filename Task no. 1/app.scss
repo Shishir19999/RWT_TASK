@@ -73,8 +73,9 @@ html, body {
   text-align: center;
   margin-bottom: 20px;
   margin-left: 10px;
+  color:#a89d83;
 
-  h3 {
+  h3 {  
     letter-spacing: 1.3px;
     font-family:Arial, Helvetica, sans-serif ;
     font-weight: 400;
@@ -115,7 +116,7 @@ html, body {
       font-size: 16px;
       color: white;
       border: transparent;
-      border-bottom:2px solid yellow;
+      border-bottom:2px solid #a89d83;
       background-color: transparent; 
       padding: 10px;
       height:45px;
@@ -142,3 +143,38 @@ html, body {
     }
   }
 }
+
+@media only screen and (max-width: 991px) {
+  .slick-wrapper{
+    background: linear-gradient(to right, #413d3a, #65605d); /* Linear gradient */
+
+  }
+  .overlay-content {
+    margin-top:-70px;
+    left: 50%; /* Centers the container */
+    transform: translateX(-50%); /* Centers the container */
+  }
+
+  .text-content {
+    margin: 20px auto; /* Centers the content */
+    padding: 0 15px;
+  }
+
+  .text-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .text-content p {
+    font-size: 13px;
+  }
+  .slick-wrapper {
+    display: flex;
+    flex-direction: column-reverse; /* This moves the image to the bottom */
+  }
+  .slick-slide img{
+    width:100%;
+    height: auto;
+
+  }
+}
+
