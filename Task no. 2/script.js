@@ -17,10 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    console.log("Form Submitted");
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Remember Me:", rememberMe);
 
     alert("Login Successful!");
   });
