@@ -1,81 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slide Slicker Website</title>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tribali - Coming Soon</title>
+  <meta name="description" content="Tribali is launching soon. Count down to the launch, browse the preview slider and sign up to be the first to know.">
+  <meta name="theme-color" content="#121110">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tribali - Coming Soon">
+  <meta property="og:description" content="Handcrafted jewellery, launching soon. Sign up to find out when we open.">
+  <meta property="og:image" content="assets/img/Tribali_website_comingsoon1-1200.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('rwt.theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* default theme */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="vendor/slick.min.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/coming-soon.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- fontawesome stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha384-qrALq7+6jBOZIQsNnT6xGkMDru64qD6uTlDra39xrt2SoXl4pO3FX6Roz/RpR/BS" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <header class="topbar">
+    <a class="back-link" href="../index.html" aria-label="Back to the task overview">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      <span>All tasks</span>
+    </a>
+    <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Switch theme" aria-pressed="true">
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </header>
 
-    <!-- stylesheet for slick theme -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/2.0.0/slick-theme.min.css" rel="stylesheet" integrity="sha384-AThqinpDJV+SIEXgrpYi7a1G4RW2f74fmZOkxZtmvakPPAcHGW2rEjfg/QjUyGS+" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/2.0.0/slick.min.css" rel="stylesheet" integrity="sha384-KohQL6YBiGZciD/ndkn1Ko7o85BrIrBAmRBqWXsv1SaRtrdBKnGEJxuQslkmwBBA" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- outer stylesheet initialization-->
-    <!-- I usually prefer using scss and generate css, but it's your choice :)
-    extension for vscode: glenn2223.live-sass -->
-    <link rel="stylesheet" href="./assets/css/app.css" />
-  </head>
-  <body>
-    <div class="contents">
-      <div class="overlay-content">
-        <img src="assets/img/TriBali_Logo_Web.svg" alt="Logo" class="logo" />
-        <div class="text-content">
-          <h3>COMING SOON</h3>
-          <p><span>
-            In the meantime follow us on<br> Instagram,
-             or find us at the market <br>
-             (Bondi and Paddington)</span>
-             <br>
-             <span>Sign up to find out when we launch!</span>
-          </p>
-        </div>
-        <div class="subscribe-follow">
-          <box-icon name="instagram" type="logo" color="#a89d83"></box-icon>
-          <div class="subscribe-container">
-            <input
-              type="email"
-              placeholder="Subscribe your email"
-              class="subscribe-input"
-            />
-           
-            <box-icon type="solid" name="right-arrow" color="#a89d83"></box-icon>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" data-parallax="0.25" aria-label="Preview slider" role="region">
+        <div class="hero-media-inner" data-depth="10">
+          <div class="hero-slider" id="slider" aria-roledescription="carousel" aria-label="Tribali preview images">
+            <div class="slide">
+              <picture>
+                <source media="(max-width: 992px)" type="image/avif" srcset="assets/img/Tribali_website_smallwebsite1-500.avif">
+                <source media="(max-width: 992px)" type="image/webp" srcset="assets/img/Tribali_website_smallwebsite1-500.webp">
+                <source type="image/avif" srcset="assets/img/Tribali_website_comingsoon1-1200.avif 1200w, assets/img/Tribali_website_comingsoon1-1920.avif 1920w" sizes="100vw">
+                <source type="image/webp" srcset="assets/img/Tribali_website_comingsoon1-1200.webp 1200w, assets/img/Tribali_website_comingsoon1-1920.webp 1920w" sizes="100vw">
+                <img src="assets/img/Tribali_website_comingsoon1-1920.webp" width="1920" height="880" alt="Close-up portrait of a model wearing a gold drop earring" fetchpriority="high">
+              </picture>
+            </div>
+            <div class="slide">
+              <picture>
+                <source media="(max-width: 992px)" type="image/avif" srcset="assets/img/Tribali_website_smallwebsite2-500.avif">
+                <source media="(max-width: 992px)" type="image/webp" srcset="assets/img/Tribali_website_smallwebsite2-500.webp">
+                <source type="image/avif" srcset="assets/img/Tribali_website_comingsoon2-1200.avif 1200w, assets/img/Tribali_website_comingsoon2-1920.avif 1920w" sizes="100vw">
+                <source type="image/webp" srcset="assets/img/Tribali_website_comingsoon2-1200.webp 1200w, assets/img/Tribali_website_comingsoon2-1920.webp 1920w" sizes="100vw">
+                <img src="assets/img/Tribali_website_comingsoon2-1920.webp" width="1920" height="880" alt="Portrait of a model with a tattooed neck and long gold earrings" loading="lazy">
+              </picture>
+            </div>
+            <div class="slide">
+              <picture>
+                <source media="(max-width: 992px)" type="image/avif" srcset="assets/img/Tribali_website_smallwebsite3-500.avif">
+                <source media="(max-width: 992px)" type="image/webp" srcset="assets/img/Tribali_website_smallwebsite3-500.webp">
+                <source type="image/avif" srcset="assets/img/Tribali_website_comingsoon3-1200.avif 1200w, assets/img/Tribali_website_comingsoon3-1920.avif 1920w" sizes="100vw">
+                <source type="image/webp" srcset="assets/img/Tribali_website_comingsoon3-1200.webp 1200w, assets/img/Tribali_website_comingsoon3-1920.webp 1920w" sizes="100vw">
+                <img src="assets/img/Tribali_website_comingsoon3-1920.webp" width="1920" height="880" alt="Model in a patterned scarf wearing stacked gold jewellery" loading="lazy">
+              </picture>
+            </div>
           </div>
         </div>
-        
+        <div class="hero-shade" aria-hidden="true"></div>
       </div>
-      <!-- Slick slider wrapper -->
-      <div class="slick-wrapper">
-        <div class="slick-slide">
-          <img src="assets/img/Tribali_website_comingsoon1.png" 
-          data-mobile-src="assets/img/Tribali_website_smallwebsite1.png"
-          alt="Slide 1" />
-          
+
+      <div class="orb orb-a" data-depth="26" aria-hidden="true"><span class="float"></span></div>
+      <div class="orb orb-b" data-depth="-18" aria-hidden="true"><span class="float slow"></span></div>
+      <div class="ring" data-depth="14" aria-hidden="true"><span class="float"></span></div>
+
+      <div class="panel" data-reveal>
+        <img class="logo" src="assets/img/TriBali_Logo_Web.svg" width="160" height="160" alt="Tribali logo">
+        <h1 id="hero-title">Coming soon</h1>
+        <p class="lead">In the meantime follow us on Instagram, or find us at the market in Bondi and Paddington.</p>
+
+        <div class="countdown" id="countdown" data-launch="2027-01-15T09:00:00" role="timer" aria-label="Time until launch">
+          <div class="cd-cell"><span class="cd-num" data-unit="days">--</span><span class="cd-label">Days</span></div>
+          <div class="cd-cell"><span class="cd-num" data-unit="hours">--</span><span class="cd-label">Hours</span></div>
+          <div class="cd-cell"><span class="cd-num" data-unit="minutes">--</span><span class="cd-label">Min</span></div>
+          <div class="cd-cell"><span class="cd-num" data-unit="seconds">--</span><span class="cd-label">Sec</span></div>
         </div>
-        <div class="slick-slide">
-          <img src="assets/img/Tribali_website_comingsoon2.png" 
-          data-mobile-src="assets/img/Tribali_website_smallwebsite2.png"
-          alt="Slide 2" />
-          
-        </div>
-        <div class="slick-slide">
-          <img src="assets/img/Tribali_website_comingsoon3.png"
-          data-mobile-src="assets/img/Tribali_website_smallwebsite3.png"
-          alt="Slide 3" />
-          
-        </div>
+        <p class="sr-only" id="countdown-text" aria-live="off"></p>
+
+        <form id="subscribe" class="subscribe" novalidate>
+          <label for="sub-email">Sign up to find out when we launch</label>
+          <div class="sub-row">
+            <input class="input" id="sub-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="sub-msg">
+            <button class="btn" type="submit">Notify me</button>
+          </div>
+          <p class="sub-msg" id="sub-msg" role="status" aria-live="polite"></p>
+        </form>
+
+        <a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow Tribali on Instagram (opens in a new tab)">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+          <span>Follow us on Instagram</span>
+        </a>
       </div>
-    </div>
-    
 
-    <!-- boxicons web component (instagram / arrow icons) -->
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" integrity="sha384-7mJOKdhjyvl9nulnWfxlDA9QTOGfRSIpUaFwjS79e4/QOPuafmAzqmYnsT+QEsu1" crossorigin="anonymous"></script>
+      <div class="slider-controls" role="group" aria-label="Slider controls">
+        <button type="button" class="icon-btn" id="prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button type="button" class="icon-btn" id="toggle-play" aria-label="Pause slideshow" aria-pressed="false">
+          <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+          <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>
+        </button>
+        <button type="button" class="icon-btn" id="next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="dots" id="dots" aria-label="Choose slide"></div>
+      </div>
+    </section>
 
-    <!-- jQuery 4 + slick-carousel 2 -->
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/2.0.0/slick.min.js" integrity="sha384-5MfYQxWDQgt6TThAM9tk3dZqJNosm/eVLxtQLosoyTz8eFus3yIUO7luxPHqSqpU" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <section class="expect" aria-labelledby="expect-title">
+      <div class="expect-bg" data-parallax="0.12" aria-hidden="true"><span></span></div>
+      <div class="wrap">
+        <h2 id="expect-title" data-reveal>What to expect</h2>
+        <p class="expect-intro" data-reveal data-reveal-delay="80">A small, careful collection made by hand. Here is what the opening day will bring.</p>
+        <ul class="cards">
+          <li class="card" data-reveal data-reveal-delay="0">
+            <h3>Handmade pieces</h3>
+            <p>Bracelets, cuffs and earrings finished one at a time in small batches.</p>
+          </li>
+          <li class="card" data-reveal data-reveal-delay="120">
+            <h3>Market-first drops</h3>
+            <p>New designs appear at our Bondi and Paddington stalls before they go online.</p>
+          </li>
+          <li class="card" data-reveal data-reveal-delay="240">
+            <h3>Launch-day access</h3>
+            <p>Subscribers hear about the opening first and get early access to the shop.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <footer class="footer">
+    <p>&copy; 2026 Tribali. Practice project - the subscribe form only stores your email in this browser.</p>
+  </footer>
+
+  <script src="vendor/jquery-4.0.0.min.js"></script>
+  <script src="vendor/slick.min.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/parallax.js"></script>
+  <script src="assets/js/coming-soon.js"></script>
+</body>
 </html>
