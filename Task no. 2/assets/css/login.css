@@ -1,0 +1,42 @@
+/* Task 2 - login page */
+body { overflow-x: hidden; }
+
+.scene { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: #121110; }
+.scene-bg { position: absolute; inset: -8% 0; }
+.scene-bg picture, .scene-bg img { width: 100%; height: 100%; object-fit: cover; }
+.scene-shade { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(12, 11, 10, 0.35), rgba(12, 11, 10, 0.82)); }
+[data-theme="light"] .scene-shade { background: radial-gradient(ellipse at 50% 40%, rgba(250, 248, 243, 0.45), rgba(250, 248, 243, 0.86)); }
+.blob { position: absolute; pointer-events: none; }
+.blob span { display: block; width: 100%; height: 100%; border-radius: 50%; }
+.blob-a { width: 220px; height: 220px; left: 8%; top: 16%; }
+.blob-a span { background: radial-gradient(circle at 35% 35%, rgba(226, 214, 179, 0.5), transparent 70%); }
+.blob-b { width: 300px; height: 300px; right: 6%; bottom: 8%; }
+.blob-b span { background: radial-gradient(circle at 60% 40%, rgba(173, 163, 134, 0.4), transparent 70%); }
+
+.topbar { position: fixed; inset: 0 0 auto 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: var(--sp-3) var(--sp-4); }
+.back-link { display: inline-flex; align-items: center; gap: var(--sp-1); padding: var(--sp-2) var(--sp-4); border-radius: var(--radius-pill); background: var(--surface); border: 1px solid var(--border); color: var(--text); text-decoration: none; font-size: var(--fs-sm); backdrop-filter: blur(10px); }
+.back-link:hover { border-color: var(--accent); }
+
+.stage { min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: 5rem var(--sp-4) var(--sp-6); }
+.card {
+  width: min(440px, 100%); padding: var(--sp-6);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: var(--shadow);
+}
+.card h1 { font-size: var(--fs-xl); text-align: center; margin-bottom: var(--sp-2); color: var(--text); }
+.sub { text-align: center; color: var(--muted); font-size: var(--fs-sm); margin-bottom: var(--sp-5); }
+.row { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3); flex-wrap: wrap; margin: var(--sp-2) 0 var(--sp-5); font-size: var(--fs-sm); }
+.center { text-align: center; margin: var(--sp-4) 0 0; font-size: var(--fs-sm); }
+.demo-hint { margin: var(--sp-5) 0 0; font-size: var(--fs-xs); color: var(--muted); text-align: center; }
+.demo-hint code { padding: 1px 6px; border-radius: 6px; background: var(--bg-alt); color: var(--text); }
+.link-btn { background: none; border: 0; padding: 4px; font: inherit; color: var(--accent-strong); text-decoration: underline; cursor: pointer; }
+.alert { margin-bottom: var(--sp-4); padding: var(--sp-3) var(--sp-4); border-radius: var(--radius-sm); border: 1px solid var(--danger); color: var(--danger); background: color-mix(in srgb, var(--danger) 10%, var(--surface-solid)); font-size: var(--fs-sm); }
+.alert.info { border-color: var(--success); color: var(--success); background: color-mix(in srgb, var(--success) 10%, var(--surface-solid)); }
+.alert[hidden], [hidden] { display: none !important; }
+.check-badge { width: 64px; height: 64px; margin: 0 auto var(--sp-4); display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: var(--on-accent); }
+.check-badge svg { width: 32px; height: 32px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+@media (max-width: 420px) {
+  .card { padding: var(--sp-5) var(--sp-4); }
+  .blob { display: none; }
+}

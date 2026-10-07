@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RWT Tasks - Shishir</title>
+  <meta name="description" content="Two front-end practice tasks: a slick-slider coming soon page with countdown and a validated login form.">
+  <meta name="theme-color" content="#121110">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RWT Tasks - Shishir">
+  <meta property="og:description" content="A coming soon page with a slider and countdown, and a validated login form.">
+  <meta property="og:image" content="assets/img/shot-task1.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('rwt.theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* default theme */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="nav">
+    <a class="brand" href="index.html" aria-label="RWT tasks home">
+      <img src="assets/img/favicon.svg" width="32" height="32" alt="">
+      <span>RWT Tasks</span>
+    </a>
+    <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Switch theme" aria-pressed="true">
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-layer l1" data-parallax="0.3" aria-hidden="true"><span></span></div>
+      <div class="hero-layer l2" data-parallax="-0.15" aria-hidden="true"><span class="float"></span></div>
+      <div class="hero-layer l3" data-parallax="0.12" aria-hidden="true"><span class="float slow"></span></div>
+      <div class="hero-text">
+        <p class="eyebrow" data-reveal>Front-end practice</p>
+        <h1 data-reveal data-reveal-delay="80">Two small tasks, built carefully.</h1>
+        <p class="hero-lead" data-reveal data-reveal-delay="160">A launch-teaser page with a slider, countdown and email sign-up, and a glass-style login form with real validation. Pick one to open it.</p>
+        <div class="hero-cta" data-reveal data-reveal-delay="240">
+          <a class="btn" href="Task%20no.%201/index.html">Open Task 1</a>
+          <a class="btn btn-ghost" href="Task%20no.%202/index.html">Open Task 2</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tasks" aria-labelledby="tasks-title">
+      <h2 id="tasks-title" class="sr-only">The tasks</h2>
+      <article class="task" data-reveal>
+        <a class="shot" href="Task%20no.%201/index.html" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/shot-task1.webp" width="960" height="540" alt="" loading="lazy">
+        </a>
+        <div class="task-body">
+          <p class="eyebrow">Task no. 1</p>
+          <h3>Coming soon slider</h3>
+          <p>A full-screen slick slider with pause, previous and next controls, a live launch countdown and an email sign-up form.</p>
+          <ul class="tags"><li>slick slider</li><li>countdown</li><li>subscribe form</li><li>keyboard + touch</li></ul>
+          <a class="btn" href="Task%20no.%201/index.html">View Task 1</a>
+        </div>
+      </article>
+
+      <article class="task reverse" data-reveal>
+        <a class="shot" href="Task%20no.%202/index.html" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/shot-task2.webp" width="960" height="540" alt="" loading="lazy">
+        </a>
+        <div class="task-body">
+          <p class="eyebrow">Task no. 2</p>
+          <h3>Login form</h3>
+          <p>A frosted-glass sign in card with inline validation, show password, remember me, forgot password and a demo account.</p>
+          <ul class="tags"><li>validation</li><li>show password</li><li>remember me</li><li>demo auth</li></ul>
+          <a class="btn" href="Task%20no.%202/index.html">View Task 2</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Shishir. Practice project, no real accounts or data.</p>
+  </footer>
+
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/parallax.js"></script>
+</body>
+</html>
